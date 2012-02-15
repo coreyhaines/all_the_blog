@@ -1,0 +1,23 @@
+.row.row-fluid
+  .span3.offset1
+    %h1 Listing posts
+
+.row.row-fluid
+  .span10.offset2
+    %table.table.table-striped
+      %tr
+        %th Title
+        %th Body
+        %th
+        %th
+        %th
+      -@posts.each do |post|
+        %tr
+          %td= post.title
+          %td= truncate(post.body, length: 30)
+          %td= link_to 'Show', post
+          %td= link_to 'Edit', edit_post_path(post)
+          %td= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete
+
+%br
+= link_to 'New Post', new_post_path
