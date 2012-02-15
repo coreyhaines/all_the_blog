@@ -20,6 +20,7 @@ Short loin short ribs beef ribs, strip steak fatback sausage frankfurter rump je
 BACON
 
 
+Post.destroy_all
 10.times do |index|
-  Post.create title: "Awesome post #{index}", body: body
+  Post.create title: "Awesome post #{index}", body: body, published: true
 end
