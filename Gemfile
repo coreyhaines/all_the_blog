@@ -18,4 +18,6 @@ group :development do
   gem 'unicorn'
 end
 
-
+group :development, :test do
+  gem 'rspec-rails'
+end
