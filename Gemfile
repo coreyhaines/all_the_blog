@@ -23,6 +23,6 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-group :product do
+group :production do
   gem 'pg'
 end
