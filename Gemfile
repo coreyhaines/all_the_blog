@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
 
-gem 'sqlite3'
 
 gem 'haml'
 
@@ -20,5 +19,10 @@ group :development do
 end
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails'
+end
+
+group :product do
+  gem 'pg'
 end
